@@ -1,0 +1,34 @@
+body {
+  box-sizing: border-box;
+  font-family: 'Tajawal', sans-serif;
+}
+
+.page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar-container {
+  flex: 1;
+  height: 55px;
+  z-index: 99;
+}
+
+.below-nav-container {
+  background-color: #4a4e4d;
+  position: absolute;
+  top: 65px;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+@media only screen and (max-width: 768px) {
+  .below-nav-container {
+    top: 45px;
+  }
+}

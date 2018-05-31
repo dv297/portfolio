@@ -1,0 +1,24 @@
+.blog-post-title {
+  font-family: 'Tajawal', sans-serif;
+}
+
+.blog-post-content {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.blog-post-footer {
+  width: 100%;
+  display: flex;
+}
+
+.blog-post-footer-date {
+  flex: 1;
+}
+
+.blog-post-footer-tags {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+
