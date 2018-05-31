@@ -22,13 +22,19 @@ class Navbar extends React.Component {
     }));
   };
 
+  closeMenu = () => {
+    this.setState(({ isMenuOpen }) => ({
+      isMenuOpen: false,
+    }));
+  };
+
   render() {
     const navbarItemsClass = this.state.isMenuOpen
       ? 'navbar-items navbar-item-toggle-show'
       : 'navbar-items navbar-item-toggle-hide';
 
     const NavbarLink = ({ to, children }) => (
-      <NavLink to={to} className="navbar-link" activeClassName="navbar-item-active" exact>
+      <NavLink to={to} className="navbar-link" activeClassName="navbar-item-active" onClick={this.closeMenu} exact>
         {children}
       </NavLink>
     );

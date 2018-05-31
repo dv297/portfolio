@@ -68,12 +68,6 @@
   }
 }
 
-@media screen and (max-width: 500px) {
-  .skills-header-container > * {
-    font-size: x-small;
-  }
-}
-
 .home-text-container {
   display: flex;
   flex-direction: column;
