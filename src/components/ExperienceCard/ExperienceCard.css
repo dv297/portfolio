@@ -1,0 +1,27 @@
+.experience-card {
+
+}
+
+.experience-card h1 {
+  font-size: larger;
+  font-weight: 700;
+}
+
+.experience-card-subheader {
+  display: flex;
+}
+
+.experience-card-subheader > * {
+  font-size: large;
+  font-weight: 500;
+  display: flex;
+  flex: 1;
+}
+
+.experience-card-subheader > *:nth-child(1) {
+  justify-content: flex-start;
+}
+
+.experience-card-subheader > *:nth-child(2) {
+  justify-content: flex-end;
+}

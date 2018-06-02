@@ -8,7 +8,7 @@
 import React from 'react';
 
 import './Home.css';
-import profilePicture from '../../images/profile.jpg';
+import profilePicture from '../../images/profile-optimized.jpg';
 
 const Home = () => {
   return (
