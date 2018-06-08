@@ -1,0 +1,13 @@
+.blog-post-listing {
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-post-listing-title {
+  font-size: xx-large;
+  margin-bottom: 15px;
+}
+
+.blog-post-listing-excerpt {
+  margin-bottom: 15px;
+}

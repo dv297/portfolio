@@ -6,12 +6,14 @@
  */
 
 import React from 'react';
+import { withPrefix } from 'gatsby-link'
+
 import DefaultPageContainer from '../components/DefaultPageContainer/DefaultPageContainer';
 import ExperienceCard from '../components/ExperienceCard/ExperienceCard';
 import Pill from '../components/Pill/Pill';
 
 const getPillList = (list) => (
-  <div style={{ display: 'flex', flexFlow: 'row wrap' }}>{list.map((entry) => <Pill>{entry}</Pill>)}</div>
+  <div style={{ display: 'flex', flexFlow: 'row wrap' }}>{list.map((entry) => <Pill key={entry}>{entry}</Pill>)}</div>
 );
 
 const Resume = () => {
@@ -19,7 +21,7 @@ const Resume = () => {
     <DefaultPageContainer>
       <h1>Resume</h1>
       <small>
-        <a href={`${process.env.PUBLIC_URL}/resume.pdf`}>Printable resume with full descriptions</a>
+        <a href={withPrefix('/resume.pdf')}>Printable resume with full descriptions</a>
       </small>
       <h2>Technologies Worked With</h2>
       <h3>Languages, Frameworks, and Libraries</h3>

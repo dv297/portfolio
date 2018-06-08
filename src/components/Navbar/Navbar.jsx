@@ -6,7 +6,7 @@
  */
 
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import Link from 'gatsby-link';
 import FontAwesome from 'react-fontawesome';
 
 import './Navbar.css';
@@ -34,9 +34,9 @@ class Navbar extends React.Component {
       : 'navbar-items navbar-item-toggle-hide';
 
     const NavbarLink = ({ to, children }) => (
-      <NavLink to={to} className="navbar-link" activeClassName="navbar-item-active" onClick={this.closeMenu} exact>
+      <Link to={to} className="navbar-link" activeClassName="navbar-item-active" onClick={this.closeMenu} exact>
         {children}
-      </NavLink>
+      </Link>
     );
 
     return (

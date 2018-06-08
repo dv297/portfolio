@@ -1,21 +1,33 @@
-/**
- * @license
- * Copyright &copy 2018 Cerner Corporation
- *
- * @author Daniel Vu
- */
+import React from 'react'
+import Link from 'gatsby-link'
+import BlogPostListing from '../components/BlogPostListing/BlogPostListing'
 
-import React from 'react';
+import DefaultPageContainer from '../components/DefaultPageContainer/DefaultPageContainer'
 
-import BlogPost from '../components/BlogPost/BlogPost';
-import DefaultPageContainer from '../components/DefaultPageContainer/DefaultPageContainer';
+const IndexPage = ({ data: { allMarkdownRemark: { edges } } }) => {
+  const Posts = edges
+    .filter((edge) => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
+    .map(({ node }) => <BlogPostListing post={node} key={node.id} />)
 
-const Blog = () => {
-  return (
-    <DefaultPageContainer>
-      <BlogPost />
-    </DefaultPageContainer>
-  );
-};
+  return <DefaultPageContainer>{Posts}</DefaultPageContainer>
+}
 
-export default Blog;
+export default IndexPage
+
+export const pageQuery = graphql`
+    query IndexQuery {
+        allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+            edges {
+                node {
+                    id
+                    excerpt(pruneLength: 250)
+                    frontmatter {
+                        date(formatString: "MMMM DD, YYYY")
+                        path
+                        title
+                    }
+                }
+            }
+        }
+    }
+`

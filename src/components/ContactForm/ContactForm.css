@@ -1,0 +1,30 @@
+.contact-form {
+  display: grid;
+  grid-auto-columns: 1fr 1fr;
+}
+
+.contact-form-hidden {
+  display: none;
+}
+
+.contact-form > label {
+  font-size: large;
+  font-weight: bold;
+}
+
+.contact-form-input {
+  outline: 0;
+  line-height: 15px;
+  border-radius: 5px;
+  padding: 0.67857143em 1em;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.contact-form > button[type="submit"] {
+  color: #FFF;
+  line-height: 30px;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  background-color: rgba(14, 154, 167, 0.9);
+}

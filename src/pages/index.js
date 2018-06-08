@@ -6,9 +6,10 @@
  */
 
 import React from 'react';
+import 'font-awesome/css/font-awesome.min.css';
 
 import './Home.css';
-import profilePicture from '../../images/profile-optimized.jpg';
+import profilePicture from '../images/profile-optimized.jpg';
 
 const Home = () => {
   return (
