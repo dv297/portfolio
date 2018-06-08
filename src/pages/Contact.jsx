@@ -16,7 +16,7 @@ const Contact = () => {
       <h1>Contact</h1>
       <p>Feel free to contact me about anything, from React questions to life questions!</p>
       <p>I can also be contacted at my Twitter, <a href="https://twitter.com/dvv297">dvv297</a>.</p>
-      <ContactForm name="contact" method="POST" netlify/>
+      <ContactForm />
     </DefaultPageContainer>
   );
 };
