@@ -11,10 +11,7 @@ import './ContactForm.css';
 
 const ContactForm = (props) => {
   return (
-    <form className="contact-form" {...props} name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-      <p className="contact-form-hidden">
-        <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-      </p>
+    <form className="contact-form" {...props} name="contact" method="POST" data-netlify="true" netlify>
       <label htmlFor="name">Name:</label>
       <input type="text" name="name" className="contact-form-input" />
       <label htmlFor="email">Email:</label>
