@@ -1,9 +1,10 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
 
 import PageLayout from '../components/PageLayout/PageLayout';
-import './index.css'
+import './index.css';
+import 'prismjs/themes/prism-tomorrow.css';
 
 const Layout = ({ children, data }) => (
   <div>
@@ -14,17 +15,15 @@ const Layout = ({ children, data }) => (
         { name: 'keywords', content: 'Daniel, Vu, React, Frontend, Developer, Software, Engineering, Music' },
       ]}
     />
-    <PageLayout>
-      {children()}
-    </PageLayout>
+    <PageLayout>{children()}</PageLayout>
   </div>
-)
+);
 
 Layout.propTypes = {
   children: PropTypes.func,
-}
+};
 
-export default Layout
+export default Layout;
 
 export const query = graphql`
   query SiteTitleQuery {
@@ -34,4 +33,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;
