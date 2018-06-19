@@ -1,13 +1,15 @@
 .blog-post-listing {
   display: flex;
   flex-direction: column;
+  margin-bottom: 15px;
 }
 
 .blog-post-listing-title {
   font-size: xx-large;
   margin-bottom: 15px;
+  text-decoration: none;
 }
 
 .blog-post-listing-excerpt {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }

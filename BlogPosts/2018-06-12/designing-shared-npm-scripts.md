@@ -1,8 +1,8 @@
 ---
-path: "/the-value-of-an-npm-script-convention"
-date: "2018-06-12"
-title: "The Value of an NPM Script Convention"
-tags: ["Development", "NPM"]
+path: "/designing-shared-npm-scripts"
+date: "2018-06-19"
+title: "Designing Shared NPM Scripts"
+tags: ["Development", "NPM", "JavaScript", "Web"]
 ---
 
 ```json
@@ -20,10 +20,57 @@ NPM scripts have long taken over the build process of Web projects. While Grunt 
 some, it's very common to see many projects skip this tools and go straight for using NPM scripts to handle linting,
 transpilation, and all sorts of project processing tasks.
 
+Don't know what an NPM script is? Here is a quick primer. Say you want to add linting to your project. A very popular
+linting tool is "ESLint". You could install it globally...
+
+```
+npm install -g eslint
+```
+
+... and then run it using...
+
+```
+eslint src
+```
+
+...to lint all of the files under "src". But you might work with a team of developers, and getting every developer to
+install and maintain a list of global dependencies can get hectic fast!
+
+You could instead opt to install it locally to the project.
+
+```
+npm install --save-dev eslint
+```
+
+You'll notice a new dev dependency in your package.json. But since it's not a global NPM package anymore, you'll have to
+qualify the path if you want to run ESLint directly from your command line.
+
+```
+./node_modules/.bin/eslint src
+```
+
+Obviously this gets very annoying when you have to consider all the additional flags you might add to ESLint. This is
+where NPM scripts come in. In your package.json, you can define a "scripts" section.
+
+```json
+"scripts": {
+    "lint": "eslint src",
+}
+```
+
+And then you run it using...
+
+```
+npm run lint
+```
+
+Because the scripts section is in your package.json, Node.JS will know to look into your `node_modules` folder and use
+that copy of ESLint. No more prefixing your commands with `./node_modules`!
+
 I've worked across many projects that are maintained by many teams, and I've learned that NPM scripts are not just a
-purely technical solution. NPM scripts define the way people work and communicate about a project and good NPM scripts
-can have strong social implications. Here are some tips that I have found when defining NPM scripts that are going to be
-shared.
+purely "technical" solution. NPM scripts define the way people work and communicate about a project and good NPM scripts
+can have strong social implications for both new and experienced web developers. Here are some tips that I have found
+when defining NPM scripts that are going to be shared.
 
 # 1. Define one set of scripts that work across all projects
 
@@ -115,7 +162,8 @@ fantastic NPM package that allows you to run multiple commands in parallel with 
 
 This works great but it will naively combine the console logs of each process. When something goes wrong, most
 developers assume the error is at the bottom of the log. But when running things in parallel, the error may get mixed in
-the logs of other tasks. Remember to evaluate this kind of risk and reward when setting up scripts.
+the logs of other tasks. Remember to evaluate this kind of risk and reward when setting up scripts and your team will
+thank you!
 
 # Conclusion
 
