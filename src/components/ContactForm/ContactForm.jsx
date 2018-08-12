@@ -5,22 +5,38 @@
  * @author Daniel Vu
  */
 
-import React from 'react';
+import React from 'react'
 
-import './ContactForm.css';
+import './ContactForm.css'
 
-const ContactForm = (props) => {
+const ContactForm = props => {
   return (
-    <form className="contact-form" {...props} name="contact" method="POST" data-netlify="true" netlify>
+    <form
+      className="contact-form"
+      {...props}
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      netlify
+      netlify-honeypot="bot-field"
+    >
+      <label style={{ display: 'none' }}>
+        Don’t fill this out if you're human: <input name="bot-field" />
+      </label>
       <label htmlFor="name">Name:</label>
       <input type="text" name="name" className="contact-form-input" />
       <label htmlFor="email">Email:</label>
       <input type="email" name="email" className="contact-form-input" />
       <label htmlFor="comment">Comment:</label>
-      <textarea rows="4" cols="50" name="comment" className="contact-form-input" />
+      <textarea
+        rows="4"
+        cols="50"
+        name="comment"
+        className="contact-form-input"
+      />
       <button type="submit">Submit</button>
     </form>
-  );
-};
+  )
+}
 
-export default ContactForm;
+export default ContactForm
