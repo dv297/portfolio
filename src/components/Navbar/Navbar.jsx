@@ -39,7 +39,6 @@ class Navbar extends React.Component {
         className="navbar-link"
         activeClassName="navbar-item-active"
         onClick={this.closeMenu}
-        exact
       >
         {children}
       </Link>

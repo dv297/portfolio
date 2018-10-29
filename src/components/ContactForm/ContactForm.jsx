@@ -17,7 +17,6 @@ const ContactForm = props => {
       name="contact"
       method="POST"
       data-netlify="true"
-      netlify
       netlify-honeypot="bot-field"
     >
       <input type="hidden" name="form-name" value="contact" />
