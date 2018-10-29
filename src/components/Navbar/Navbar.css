@@ -1,9 +1,9 @@
 .navbar {
   display: flex;
-  background-color: #0e9aa7;
+  background-color: #002760;
   padding: 10px;
   color: #fff;
-  border-bottom: 2px solid #f6cd61;
+  border-bottom: 2px solid #FFDC00;
 }
 
 .navbar-toggle {

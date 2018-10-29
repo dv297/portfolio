@@ -162,7 +162,7 @@ const Resume = () => {
           {getPillList(['PHP', 'JavaScript', 'HTML', 'CSS'])}
         </ExperienceCard>
         <hr />
-        <h3>Talks Given</h3>
+        <h2>Talks Given</h2>
         <ul>
           <li>Designing and Starting a React Project - March 2018</li>
           <li>Testing React Components - October 2017</li>

@@ -24,14 +24,19 @@ const ContactForm = props => {
         Don’t fill this out if you're human: <input name="bot-field" />
       </label>
       <label htmlFor="name">Name:</label>
-      <input type="text" name="name" className="contact-form-input" />
+      <input id="name" type="text" className="contact-form-input" />
       <label htmlFor="email">Email:</label>
-      <input type="email" name="email" className="contact-form-input" />
+      <input
+        id="email"
+        type="email"
+        name="email"
+        className="contact-form-input"
+      />
       <label htmlFor="comment">Comment:</label>
       <textarea
         rows="4"
         cols="50"
-        name="comment"
+        id="comment"
         className="contact-form-input"
       />
       <button type="submit">Submit</button>

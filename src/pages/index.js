@@ -15,7 +15,7 @@ import Layout from '../components/Layout'
 const Home = () => {
   return (
     <Layout>
-      <div className="home-body">
+      <main className="home-body">
         <div className="profile-picture-container">
           <img
             src={profilePicture}
@@ -46,7 +46,7 @@ const Home = () => {
             </p>
           </div>
         </div>
-      </div>
+      </main>
     </Layout>
   )
 }

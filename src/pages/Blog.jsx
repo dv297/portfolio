@@ -17,7 +17,10 @@ const IndexPage = ({
 
   return (
     <Layout>
-      <DefaultPageContainer>{Posts}</DefaultPageContainer>
+      <DefaultPageContainer>
+        <h1>Blog Posts</h1>
+        {Posts}
+      </DefaultPageContainer>
     </Layout>
   )
 }

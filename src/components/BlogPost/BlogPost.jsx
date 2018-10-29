@@ -5,6 +5,7 @@ import { graphql } from 'gatsby'
 import './BlogPost.css'
 import DefaultPageContainer from '../DefaultPageContainer/DefaultPageContainer'
 import Layout from '../Layout'
+import './a11y-dark.css'
 
 export default function Template({ data }) {
   const { markdownRemark: post } = data
