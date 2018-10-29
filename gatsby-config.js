@@ -25,6 +25,7 @@ module.exports = {
       },
     },
     'gatsby-plugin-sharp',
+    'gatsby-plugin-favicon',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
