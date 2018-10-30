@@ -21,6 +21,7 @@
   border-radius: 50%;
   border: 2px solid #fff;
   z-index: 2;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 .home-content {
@@ -37,6 +38,7 @@
   padding: 120px 40px 20px 40px;
   margin: 0px 50px 40px 50px;
   z-index: 1;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 .skills-header-container {
