@@ -31,18 +31,18 @@ const Home = () => {
           </div>
           <div className="home-text-container">
             <h2 className="welcome-header">
-              Welcome to the portfolio of Daniel Vu
+              Welcome to the portfolio of Daniel Vu!
             </h2>
             <p>
-              Having graduated from the University of South Carolina with a B.S.
-              in Computer Science, Daniel Vu moved to Kansas City to pursue a
-              career in Software Engineering. He leans towards frontend
-              development with a strong focus on creating a productive team
-              environment by continuously helping create fruitful, enjoyable
-              development experiences and helping others keep up to date with
-              the latest technology stacks. He enjoys giving talks, and he loves
-              finding new ways to promote varying aspects of software
-              engineering to developers and students of all skill levels.
+              I graduated from the University of South Carolina with a B.S. in
+              Computer Science and moved to Kansas City to pursue a career in
+              Software Engineering. I love front-end development and I strongly
+              focus on creating a productive team environment by continuously
+              helping create fruitful, enjoyable development experiences and
+              helping others keep up to date with the latest technology stacks.
+              I enjoy giving talks, and I love finding new ways to promote
+              varying aspects of software engineering to developers and students
+              of all skill levels.
             </p>
           </div>
         </div>
