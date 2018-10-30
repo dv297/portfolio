@@ -1,7 +1,8 @@
-import React from 'react';
-import Link from 'gatsby-link';
+import React from 'react'
+import Link from 'gatsby-link'
 
-import './BlogPostListing.css';
+import './BlogPostListing.css'
+import Pill from '../../components/Pill/Pill'
 
 const BlogPostListing = ({ post }) => (
   <div className="blog-post-listing">
@@ -9,8 +10,15 @@ const BlogPostListing = ({ post }) => (
       {post.frontmatter.title}
     </Link>
     <div className="blog-post-listing-excerpt">{post.excerpt}</div>
-    <small>{post.frontmatter.date}</small>
+    <div className="blog-post-listing-footer">
+      <small className="blog-post-listings-date">{post.frontmatter.date}</small>
+      <span className="blog-post-listing-tags">
+        {post.frontmatter.tags.map(tag => (
+          <Pill>{tag}</Pill>
+        ))}
+      </span>
+    </div>
   </div>
-);
+)
 
-export default BlogPostListing;
+export default BlogPostListing

@@ -16,14 +16,19 @@ export default function Template({ data }) {
           <Helmet title={`Daniel Vu - ${post.frontmatter.title}`} />
           <div className="blog-post">
             <h1 className="blog-post-title">{post.frontmatter.title}</h1>
+            <div className="blog-post-header">
+              <small className="blog-post-header-date">
+                {post.frontmatter.date}
+              </small>
+              <small className="blog-post-header-tags">
+                Tags: {post.frontmatter.tags.join(', ')}
+              </small>
+            </div>
+            <div>
+              <small>Time to Read: {post.timeToRead} minutes</small>
+            </div>
             <div className="blog-post-content">
               <div dangerouslySetInnerHTML={{ __html: post.html }} />
-              <div className="blog-post-footer-date">
-                <small>{post.frontmatter.date}</small>
-              </div>
-              <div className="blog-post-footer-tags">
-                <small>Tags: {post.frontmatter.tags.join(', ')}</small>
-              </div>
             </div>
           </div>
         </div>
@@ -36,6 +41,7 @@ export const pageQuery = graphql`
   query BlogPostByPath($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
+      timeToRead
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         path

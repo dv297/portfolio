@@ -5,6 +5,10 @@ title: "Designing Shared NPM Scripts"
 tags: ["Development", "NPM", "JavaScript", "Web"]
 ---
 
+NPM scripts have long taken over the build process of Web projects. While Grunt and Gulp commands are still used by
+some, it's very common to see many projects skip this tools and go straight for using NPM scripts to handle linting,
+transpilation, and all sorts of project processing tasks.
+
 ```json
 "scripts": {
     "build": "gatsby build",
@@ -15,10 +19,6 @@ tags: ["Development", "NPM", "JavaScript", "Web"]
 ```
 
 _A sample NPM script from a Gatsby Project_
-
-NPM scripts have long taken over the build process of Web projects. While Grunt and Gulp commands are still used by
-some, it's very common to see many projects skip this tools and go straight for using NPM scripts to handle linting,
-transpilation, and all sorts of project processing tasks.
 
 Don't know what an NPM script is? Here is a quick primer. Say you want to add linting to your project. A very popular
 linting tool is "ESLint". You could install it globally...
