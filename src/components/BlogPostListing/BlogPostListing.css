@@ -29,3 +29,13 @@
   flex-direction: row;
   justify-content: flex-end;
 }
+
+@media (max-width: 600px) {
+  .blog-post-listing-footer {
+    flex-direction: column;
+  }
+
+  .blog-post-listing-tags {
+    justify-content: flex-start;
+  }
+}
