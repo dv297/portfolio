@@ -1,5 +1,4 @@
 .home-body {
-  padding-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,7 +24,6 @@
 
 .home-content {
   position: relative;
-  top: 100px;
   min-width: 70%;
   max-width: 1280px;
   background-color: #fff;
@@ -35,7 +33,7 @@
   border: 0px solid #000000;
   font-family: 'Open Sans', sans-serif;
   padding: 120px 40px 20px 40px;
-  margin: 0px 50px 40px 50px;
+  margin: 80px 50px 40px 50px;
   z-index: 1;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
@@ -66,6 +64,20 @@
 @media screen and (max-width: 600px) {
   .skills-header-container > * {
     font-size: medium;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .skills-header-container {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-header-container > *:not(:last-child) {
+    border-right: none;
+  }
+
+  .skills-header-container > * {
+    font-size: large;
   }
 }
 

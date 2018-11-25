@@ -1,8 +1,9 @@
 .navbar {
   display: flex;
   padding: 10px;
-  color: #fff;border-bottom: 2px solid #FFDC00;
-  background-image: linear-gradient(to top, #0c3a83, #0b3880, #09367c, #073479, #063276);
+  color: #fff;
+  border-bottom: 4px solid #cfcd32;
+  background-color: #212434;
 }
 
 .navbar-toggle {
@@ -29,6 +30,10 @@
   margin-right: 10px;
   justify-content: center;
   align-items: center;
+}
+
+.navbar-item:hover {
+  font-weight: bold;
 }
 
 .navbar-item-active {

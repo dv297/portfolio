@@ -2,6 +2,7 @@ import React from 'react';
 
 import './PageLayout.css';
 import Navbar from '../Navbar/Navbar';
+import Footer from '../Footer/Footer';
 
 const PageLayout = ({ children }) => (
   <div className="page">
@@ -10,6 +11,9 @@ const PageLayout = ({ children }) => (
     </div>
     <div className="below-nav-container">
       {children}
+    </div>
+    <div>
+      <Footer />
     </div>
   </div>
 );
