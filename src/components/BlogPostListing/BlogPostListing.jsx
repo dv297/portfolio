@@ -13,8 +13,8 @@ const BlogPostListing = ({ post }) => (
     <div className="blog-post-listing-footer">
       <small className="blog-post-listings-date">{post.frontmatter.date}</small>
       <span className="blog-post-listing-tags">
-        {post.frontmatter.tags.map(tag => (
-          <Pill>{tag}</Pill>
+        {post.frontmatter.tags.map((tag, index) => (
+          <Pill key={index}>{tag}</Pill>
         ))}
       </span>
     </div>

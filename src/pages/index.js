@@ -1,10 +1,3 @@
-/**
- * @license
- * Copyright &copy 2018 Cerner Corporation
- *
- * @author Daniel Vu
- */
-
 import React from 'react'
 import 'font-awesome/css/font-awesome.min.css'
 
@@ -49,6 +42,6 @@ const Home = () => {
       </main>
     </Layout>
   )
-}
+};
 
 export default Home

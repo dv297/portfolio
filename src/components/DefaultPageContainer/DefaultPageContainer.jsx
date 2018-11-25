@@ -1,10 +1,3 @@
-/**
- * @license
- * Copyright &copy 2018 Cerner Corporation
- *
- * @author Daniel Vu
- */
-
 import React from 'react'
 
 import './DefaultPageContainer.css'

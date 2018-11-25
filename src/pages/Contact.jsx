@@ -1,10 +1,3 @@
-/**
- * @license
- * Copyright &copy 2018 Cerner Corporation
- *
- * @author Daniel Vu
- */
-
 import React from 'react'
 
 import ContactForm from '../components/ContactForm/ContactForm'
@@ -22,7 +15,7 @@ const Contact = () => {
         </p>
         <p>
           I can also be contacted at my Twitter,{' '}
-          <a href="https://twitter.com/dvv297">dvv297</a>.
+          <a href="https://twitter.com/thedanielvu">TheDanielVu</a>.
         </p>
         <ContactForm />
       </DefaultPageContainer>
