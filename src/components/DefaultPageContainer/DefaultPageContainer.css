@@ -1,6 +1,6 @@
 .default-page-container {
   font-family: 'Open Sans', sans-serif;
-  padding: 20px 40px 20px 40px;
+  padding: 20px 40px;
   margin: 20px 50px 40px 50px;
   background-color: #FEFEFE;
   border-radius: 5px 5px 5px 5px;
@@ -14,5 +14,6 @@
 @media only screen and (max-width: 600px) {
   .default-page-container {
     min-width: 90%;
+    padding: 10px 20px;
   }
 }

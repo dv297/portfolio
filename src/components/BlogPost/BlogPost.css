@@ -9,16 +9,21 @@
 
 .blog-post-header {
   width: 100%;
-  display: flex;
-}
-
-.blog-post-header-date {
-  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .blog-post-header-tags {
   display: flex;
-  flex: 1;
   justify-content: flex-end;
 }
 
+@media only screen and (max-width: 600px) {
+  .blog-post-header {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-post-header-tags {
+    justify-content: flex-start;
+  }
+}
