@@ -1,9 +1,9 @@
 .pill {
-  max-height: 18px;
+  max-height: 24px;
   width: fit-content;
   background-color: #002760;
   color: #FFF;
-  font-size: small;
+  font-size: medium;
   border-radius: 5px;
   padding-left: 10px;
   padding-right: 10px;

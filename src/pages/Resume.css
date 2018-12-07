@@ -1,0 +1,30 @@
+.resume-technologylist {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.resume-experience {
+    clear: both;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.resume-experience > img {
+    max-height: 400px;
+    max-width: 100%;
+    float: left;
+    margin-right: 20px;
+}
+
+.group:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media only screen and (max-width: 700px) {
+    .resume-experience > img {
+        margin-bottom: 0;
+        float: none;
+    }
+}

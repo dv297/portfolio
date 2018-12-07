@@ -1,10 +1,16 @@
 import React from 'react'
 import { withPrefix } from 'gatsby-link'
 
+import './Resume.css'
 import DefaultPageContainer from '../components/DefaultPageContainer/DefaultPageContainer'
 import ExperienceCard from '../components/ExperienceCard/ExperienceCard'
 import Pill from '../components/Pill/Pill'
 import Layout from '../components/Layout'
+
+import cernerHackthonImage from '../images/cerner-hackathon.jpg'
+import hackkcImage from '../images/hackkc.jpg'
+import hackMidwestImage from '../images/hackathon.jpg'
+import drummingImage from '../images/drumming.jpg'
 
 const getPillList = list => (
   <div style={{ display: 'flex', flexFlow: 'row wrap' }}>
@@ -26,8 +32,9 @@ const Resume = () => {
         </small>
         <h2>Technologies Worked With</h2>
         <h3>Languages, Frameworks, and Libraries</h3>
-        <ul style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
+        <ul className="resume-technologylist">
           <li>React</li>
+          <li>Jest</li>
           <li>JavaScript (ES2015)</li>
           <li>Redux</li>
           <li>Node.JS</li>
@@ -45,12 +52,19 @@ const Resume = () => {
           <li>SQL</li>
         </ul>
         <h3>Tools</h3>
-        <ul style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
+        <ul className="resume-technologylist">
+          <li>Jenkins</li>
+          <li>Docker</li>
           <li>Git</li>
           <li>Webpack</li>
           <li>Grunt</li>
           <li>Amazon Web Services</li>
           <li>Google App Engine</li>
+        </ul>
+        <h3>Skills/ Training</h3>
+        <ul>
+          <li>Trained and well-versed in Agile</li>
+          <li>Enjoys mentoring and sharing knowledge</li>
         </ul>
         <hr />
         <h2>Professional Experiences</h2>
@@ -69,15 +83,22 @@ const Resume = () => {
               Contributed to Cerner’s open-source reusable component library
               “Terra”
             </li>
+            <li>
+              Worked on improving Cerner Scheduling's CI/CD workflow through the
+              use of Jenkins
+            </li>
           </ul>
           <small>Technologies Worked With:</small>
           <br />
           {getPillList([
             'ES2015',
             'React',
+            'Jest',
             'Redux',
             'Webpack',
             'Babel',
+            'Jenkins',
+            'Docker',
             'SASS',
             'Java',
             'jQuery',
@@ -173,6 +194,68 @@ const Resume = () => {
             <li>GPA: 3.829</li>
           </ul>
         </ExperienceCard>
+        <hr />
+        <h3>Experiences, for fun!</h3>
+        <div className="resume-experiences ">
+          <div className="resume-experience group">
+            <img
+              src={cernerHackthonImage}
+              alt="Winning the RevenueCycle 2018 Hackathon"
+            />
+            <p>
+              Cerner hosts various hackathons and my partner and I won
+              RevenueCycle's 2018 hackathon! Working with Dustin Singleton, we
+              created a React/GraphQL + NodeJS/Neo4J based application that
+              parsed our released Java JAR's and reported the dependencies and
+              projects used within a particular JAR. This, combined with API's
+              to pull all of our past released JAR's, allowed our organization
+              to view historical data and trace how a particular project or
+              dependency may have impacted several releases of code, saving many
+              hours of debugging.
+            </p>
+          </div>
+          <div className="resume-experience group">
+            <img src={hackkcImage} alt="Participating in HackKC 2017" />
+            <p>
+              I participated in Code for KC's 2017 hackathon "HackKC". Code for
+              KC, as they put it, are "a group of civic-minded geeks who
+              volunteer our talents to projects that improve how our local
+              governments and community organizations use the web". Worked on a
+              React Native project called "Tagging Tracker", which allowed users
+              to tag locations of graffiti. These tags would get sent to an
+              organization who would send volunteers to clean up the graffiti.
+            </p>
+          </div>
+          <div className="resume-experience group">
+            <img
+              src={hackMidwestImage}
+              alt="Participating in Hack Midwest 2018"
+            />
+            <p>
+              My friends and I participated in Hack Midwest 2018. We were
+              interested in learning React Native so we decided to make a mobile
+              app! The idea of the app was to help route volunteers to homeless
+              citizens of KC and provide them with water and other resources
+              during the summer heat. We used Okta for authentication and HERE
+              for their map API's. Learned a lot and had tons of fun!
+            </p>
+          </div>
+          <div className="resume-experience group">
+            <img
+              src={drummingImage}
+              alt="Drumming for the LGBA 2018 Conference"
+            />
+            <p>
+              Along with coding, I enjoy drumming in my spare time. I was
+              originally a music education major before switching over to
+              computer science. I play with the Mid America Freedom Band, an
+              LGBTQA+ concert band in Kansas City, and we had the honor and
+              privilege of hosting the 2018 LGBA Conference. Along with the
+              concert band, I play drum set with the Mighty Mo Combo, a subset
+              of the band that focuses on jazz.
+            </p>
+          </div>
+        </div>
       </DefaultPageContainer>
     </Layout>
   )
