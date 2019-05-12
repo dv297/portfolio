@@ -1,11 +1,13 @@
-import React from 'react';
+import React from 'react'
 
-import './Pill.css';
+import './Pill.css'
 
 const Pill = ({ children, ...restProps }) => {
   return (
-    <span className="pill" {...restProps}>{children}</span>
-  );
-};
+    <span className="pill" {...restProps}>
+      {children}
+    </span>
+  )
+}
 
-export default Pill;
+export default Pill
