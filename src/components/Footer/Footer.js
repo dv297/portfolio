@@ -5,7 +5,7 @@ import './Footer.css'
 
 const Footer = () => {
   return (
-    <div className="footer">
+    <footer className="footer">
       <div className="footer-social-media">
         <a href="https://twitter.com/TheDanielVu" title="Twitter">
           <FaTwitterSquare className="footer-social-media-icon" />
@@ -20,7 +20,7 @@ const Footer = () => {
           <FaGithubSquare className="footer-social-media-icon" />
         </a>
       </div>
-    </div>
+    </footer>
   )
 }
 

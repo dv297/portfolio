@@ -1,5 +1,5 @@
 .footer {
-    background-color: #212434;
+    background-color: #7B2A21;
     color: #fff;
     font-size: 20px;
     height: 75px;
@@ -8,16 +8,21 @@
     align-items: center;
     justify-content: flex-end;
     padding: 0 20px;
-    border-top: 6px solid #0fb8c6;
 }
 
 .footer-social-media-icon {
     height: 35px;
     width: 35px;
     margin-right: 10px;
-    color: #999;
+    color: #eee;
 }
 
 .footer-social-media-icon:hover {
-    color: #eee;
+    color: #fff;
+}
+
+@media only screen and (min-width: 1024px) {
+    .footer {
+        display: none;
+    }
 }

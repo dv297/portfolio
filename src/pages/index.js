@@ -9,14 +9,14 @@ const Home = () => {
   return (
     <Layout>
       <main className="home-body">
-        <div className="profile-picture-container">
-          <img
-            src={profilePicture}
-            className="profile-picture"
-            alt="Daniel Vu"
-          />
-        </div>
         <div className="home-content">
+          <div className="profile-picture-container">
+            <img
+              src={profilePicture}
+              className="profile-picture"
+              alt="Daniel Vu"
+            />
+          </div>
           <div className="skills-header-container">
             <h1>Musician</h1>
             <h1>Developer</h1>

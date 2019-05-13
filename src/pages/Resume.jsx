@@ -183,7 +183,7 @@ const Resume = () => {
           <li>Managing Internal and UI-Reflected State - June 2017</li>
         </ul>
         <hr />
-        <h3>Education</h3>
+        <h2>Education</h2>
         <ExperienceCard
           company="University of South Carolina, Honors College"
           jobTitle="B.S. in Computer Science"
@@ -195,7 +195,7 @@ const Resume = () => {
           </ul>
         </ExperienceCard>
         <hr />
-        <h3>Experiences, for fun!</h3>
+        <h2>Experiences, for fun!</h2>
         <div className="resume-experiences ">
           <div className="resume-experience group">
             <img
