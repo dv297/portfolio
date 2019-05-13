@@ -7,9 +7,13 @@ import Sidebar from '../Sidebar/Sidebar'
 
 function PageLayout(props) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
-  const windowSize = useWindowSize()
+  let windowInnerWidth = 900
 
-  const isWideScreen = windowSize.innerWidth > 1024
+  if (typeof window !== 'undefined') {
+    windowInnerWidth = useWindowSize().innerWidth
+  }
+
+  const isWideScreen = windowInnerWidth > 1024
 
   if (isWideScreen) {
     if (!isSidebarOpen) {

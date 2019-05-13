@@ -4,16 +4,34 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-const path = require('path');
+const path = require('path')
+
+exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+  if (stage === 'build-html') {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /window-size/,
+            use: loaders.null(),
+          },
+        ],
+      },
+    })
+  }
+}
 
 exports.createPages = ({ boundActionCreators, graphql }) => {
-  const { createPage } = boundActionCreators;
+  const { createPage } = boundActionCreators
 
-  const blogPostTemplate = path.resolve('src/components/BlogPost/BlogPost.jsx');
+  const blogPostTemplate = path.resolve('src/components/BlogPost/BlogPost.jsx')
 
   return graphql(`
     {
-      allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }, limit: 1000) {
+      allMarkdownRemark(
+        sort: { order: DESC, fields: [frontmatter___date] }
+        limit: 1000
+      ) {
         edges {
           node {
             frontmatter {
@@ -23,9 +41,9 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         }
       }
     }
-  `).then((result) => {
+  `).then(result => {
     if (result.errors) {
-      return Promise.reject(result.errors);
+      return Promise.reject(result.errors)
     }
 
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
@@ -33,7 +51,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         path: node.frontmatter.path,
         component: blogPostTemplate,
         context: {}, // additional data can be passed via context
-      });
-    });
-  });
-};
+      })
+    })
+  })
+}
