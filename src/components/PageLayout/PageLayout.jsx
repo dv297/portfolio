@@ -20,10 +20,19 @@ function PageLayout(props) {
   const isWideScreen = windowInnerWidth > 1024
 
   const [isSidebarOpen, setIsSidebarOpen] = useState(isWideScreen)
+  const [isNavbarShowing, setIsNavbarShowing] = useState(!isWideScreen)
 
   if (isWideScreen) {
     if (!isSidebarOpen) {
       setIsSidebarOpen(true)
+    }
+
+    if (isNavbarShowing) {
+      setIsNavbarShowing(false)
+    }
+  } else {
+    if (!isNavbarShowing) {
+      setIsNavbarShowing(true)
     }
   }
 
@@ -44,7 +53,7 @@ function PageLayout(props) {
       />
       <div className="page">
         <div className="navbar-container">
-          {!isWideScreen && <Navbar onMenuToggle={toggle} />}
+          {isNavbarShowing && <Navbar onMenuToggle={toggle} />}
         </div>
         <div className={childrenContainerClassName}>{props.children}</div>
       </div>
