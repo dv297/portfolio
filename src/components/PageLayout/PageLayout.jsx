@@ -19,8 +19,8 @@ function PageLayout(props) {
 
   const isWideScreen = windowInnerWidth > 1024
 
-  const [isSidebarOpen, setIsSidebarOpen] = useState(isWideScreen)
-  const [isNavbarShowing, setIsNavbarShowing] = useState(!isWideScreen)
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
+  const [isNavbarShowing, setIsNavbarShowing] = useState(true)
 
   if (isWideScreen) {
     if (!isSidebarOpen) {
