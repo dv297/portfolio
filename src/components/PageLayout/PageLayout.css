@@ -7,12 +7,14 @@
 }
 
 .navbar-container {
-  height: 55px;
+  height: 60px;
   margin-bottom: 20px;
   z-index: 99;
 }
 
 .below-nav-container {
+  position: absolute;
+  margin-top: 55px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -20,8 +22,14 @@
   flex: 1;
 }
 
-@media only screen and (max-width: 768px) {
-  .below-nav-container {
-    top: 45px;
+.next-to-nav-container {
+  position: absolute;
+  margin-left: 230px;
+  width: calc(100vw - 250px);
+}
+
+@media only screen and (min-width: 1280px) {
+  .next-to-nav-container {
+    margin-top: 30px;
   }
 }

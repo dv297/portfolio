@@ -35,7 +35,7 @@ const Resume = () => {
         <ul className="resume-technologylist">
           <li>React</li>
           <li>Jest</li>
-          <li>JavaScript (ES2015)</li>
+          <li>JavaScript (ES2015+)</li>
           <li>Redux</li>
           <li>Node.JS</li>
           <li>MongoDB</li>

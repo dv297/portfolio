@@ -1,19 +1,45 @@
-import React from 'react'
+import React, { useState } from 'react'
+import useWindowSize from '@rehooks/window-size'
 
 import './PageLayout.css'
 import Navbar from '../Navbar/Navbar'
-import Footer from '../Footer/Footer'
+import Sidebar from '../Sidebar/Sidebar'
 
-const PageLayout = ({ children }) => (
-  <div className="page">
-    <div className="navbar-container">
-      <Navbar />
-    </div>
-    <div className="below-nav-container">{children}</div>
+function PageLayout(props) {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
+  const windowSize = useWindowSize()
+
+  const isWideScreen = windowSize.innerWidth > 1024
+
+  if (isWideScreen) {
+    if (!isSidebarOpen) {
+      setIsSidebarOpen(true)
+    }
+  }
+
+  const toggle = () => {
+    setIsSidebarOpen(!isSidebarOpen)
+  }
+
+  const childrenContainerClassName = isWideScreen
+    ? 'next-to-nav-container'
+    : 'below-nav-container'
+
+  return (
     <div>
-      <Footer />
+      <Sidebar
+        toggleSidebarMenu={toggle}
+        isOpen={isSidebarOpen}
+        isLocked={!isWideScreen}
+      />
+      <div className="page">
+        <div className="navbar-container">
+          {!isWideScreen && <Navbar onMenuToggle={toggle} />}
+        </div>
+        <div className={childrenContainerClassName}>{props.children}</div>
+      </div>
     </div>
-  </div>
-)
+  )
+}
 
 export default PageLayout

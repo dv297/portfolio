@@ -23,9 +23,7 @@ const Home = () => {
             <h1>Educator</h1>
           </div>
           <div className="home-text-container">
-            <h2 className="welcome-header">
-              Welcome to the portfolio of Daniel Vu!
-            </h2>
+            <h2 className="welcome-header">Hey! I'm Daniel Vu!</h2>
             <p>
               I graduated from the University of South Carolina with a B.S. in
               Computer Science and moved to Kansas City to pursue a career in

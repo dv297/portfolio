@@ -1,0 +1,76 @@
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    background-color: rgba(39, 40, 44, 0.80);
+    z-index: 600;
+    transition: opacity 300ms ease-in-out;
+    opacity: 0;
+}
+
+.sidebar-overlay-open {
+    opacity: 1;
+    width: 100vw;
+    height: 100vh;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 230px;
+    background-color: #7B2A21;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-100%);
+    transition: transform 300ms linear;
+}
+
+.sidebar-open {
+    transform: none;
+    transition: transform 300ms linear
+}
+
+.sidebar-close-button {
+    cursor: pointer;
+    background: none;
+    outline: none;
+    border: none;
+    color: #fff;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+}
+
+.sidebar-close-button:focus {
+    outline: 1px solid #fff;
+    outline-offset: -4px;
+}
+
+.sidebar-close-button:active {
+    transform: scale(0.99);
+}
+
+.sidebar-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-links > * {
+    font-size: 32px;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.sidebar-links > *:hover {
+    text-decoration: underline;
+}
+
