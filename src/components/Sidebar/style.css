@@ -74,3 +74,20 @@
     text-decoration: underline;
 }
 
+.sidebar-social-media {
+    position: absolute;
+    bottom: 10px;
+}
+
+.sidebar-social-media-icon {
+    height: 35px;
+    width: 35px;
+    margin-right: 10px;
+    color: #eee;
+}
+
+.sidebar-social-media-icon:hover {
+    color: #fff;
+}
+
+

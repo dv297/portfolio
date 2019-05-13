@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import FontAwesome from 'react-fontawesome'
 import Link from 'gatsby-link'
 import cx from 'classnames'
+import { FaTwitterSquare, FaLinkedin, FaGithubSquare } from 'react-icons/fa'
 
 import './style.css'
 
@@ -48,6 +49,20 @@ const Sidebar = props => {
           <Link to="/Blog" onClick={props.toggleSidebarMenu}>
             Blog
           </Link>
+        </div>
+        <div className="sidebar-social-media">
+          <a href="https://twitter.com/TheDanielVu" title="Twitter">
+            <FaTwitterSquare className="sidebar-social-media-icon" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/daniel-vu-a2576699/"
+            title="LinkedIn"
+          >
+            <FaLinkedin className="sidebar-social-media-icon" />
+          </a>
+          <a href="https://github.com/dv297" title="GitHub">
+            <FaGithubSquare className="sidebar-social-media-icon" />
+          </a>
         </div>
       </div>
     </OverlayWrapper>
