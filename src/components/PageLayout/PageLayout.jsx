@@ -6,7 +6,7 @@ import Navbar from '../Navbar/Navbar'
 import Sidebar from '../Sidebar/Sidebar'
 
 function PageLayout(props) {
-  let windowInnerWidth = 900
+  let windowInnerWidth = 1280
 
   if (typeof window !== 'undefined') {
     windowInnerWidth = useWindowSize().innerWidth
