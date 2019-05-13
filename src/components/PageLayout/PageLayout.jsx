@@ -6,7 +6,6 @@ import Navbar from '../Navbar/Navbar'
 import Sidebar from '../Sidebar/Sidebar'
 
 function PageLayout(props) {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
   let windowInnerWidth = 900
 
   if (typeof window !== 'undefined') {
@@ -14,6 +13,8 @@ function PageLayout(props) {
   }
 
   const isWideScreen = windowInnerWidth > 1024
+
+  const [isSidebarOpen, setIsSidebarOpen] = useState(isWideScreen)
 
   if (isWideScreen) {
     if (!isSidebarOpen) {
