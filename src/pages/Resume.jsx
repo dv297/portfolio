@@ -11,6 +11,7 @@ import cernerHackthonImage from '../images/cerner-hackathon.jpg'
 import hackkcImage from '../images/hackkc.jpg'
 import hackMidwestImage from '../images/hackathon.jpg'
 import drummingImage from '../images/drumming.jpg'
+import bootcampImage from '../images/bootcamp.jpg'
 
 const getPillList = list => (
   <div style={{ display: 'flex', flexFlow: 'row wrap' }}>
@@ -68,6 +69,34 @@ const Resume = () => {
         </ul>
         <hr />
         <h2>Professional Experiences</h2>
+        <ExperienceCard
+          company="The University of Kansas"
+          jobTitle="Full-stack Web Development Bootcamp Instructor"
+          timeWorked="November 2018 – Present"
+        >
+          <ul>
+            <li>Led instructional courses on Full-stack Web development</li>
+            <li>
+              Taught students who are new to programming the fundamentals of web
+              development, starting with HTML, CSS, and JavaScript, and leading
+              them through more advanced topics like Node.JS, Express, MongoDB,
+              MySQL, and React.
+            </li>
+          </ul>
+          <small>Technologies Worked With:</small>
+          <br />
+          {getPillList([
+            'HTML',
+            'CSS',
+            'JavaScript',
+            'jQuery',
+            'Node.JS',
+            'Express',
+            'MySQL',
+            'MongoDB',
+            'React',
+          ])}
+        </ExperienceCard>
         <ExperienceCard
           company="Cerner Corporation"
           jobTitle="Associate Senior Software Engineer"
@@ -196,6 +225,23 @@ const Resume = () => {
         </ExperienceCard>
         <hr />
         <h2>Experiences, for fun!</h2>
+        <div className="resume-experience group">
+          <img
+            src={bootcampImage}
+            alt="My 2019 Bootcamp Class"
+            style={{ marginBottom: 10 }}
+          />
+          <p>
+            In the Fall of 2018, I was given the incredible opportunity to teach
+            the University of Kansas's Fullstack Bootcamp! This 6 month bootcamp
+            covered a lot of surface area, from HTML to databases and everything
+            in between. Many of the students were working professionals in other
+            fields looking to change up their lives, so it was absolutely
+            amazing to see them start the bootcamp with zero-coding knowledge,
+            and to take that and see them make a full blown MERN application by
+            the end of the semester.
+          </p>
+        </div>
         <div className="resume-experiences ">
           <div className="resume-experience group">
             <img
@@ -203,7 +249,7 @@ const Resume = () => {
               alt="Winning the RevenueCycle 2018 Hackathon"
             />
             <p>
-              Cerner hosts various hackathons and my partner and I won
+              Cerner hosts various hackathons, and my partner and I won
               RevenueCycle's 2018 hackathon! Working with Dustin Singleton, we
               created a React/GraphQL + NodeJS/Neo4J based application that
               parsed our released Java JAR's and reported the dependencies and
