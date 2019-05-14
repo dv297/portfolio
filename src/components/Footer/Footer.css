@@ -14,7 +14,8 @@
     height: 35px;
     width: 35px;
     margin-right: 10px;
-    color: #eee;
+    color: #bf6e67;
+    transition: color 300ms ease-in-out;
 }
 
 .footer-social-media-icon:hover {

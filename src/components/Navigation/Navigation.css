@@ -8,7 +8,6 @@
 
 .nav-links {
     background-color: #7B2A21;
-    color: #fff;
 }
 
 .nav-links {
@@ -16,12 +15,14 @@
 }
 
 .nav-links > * {
+    transition: color 300ms ease-in-out;
     color: #fff;
     text-decoration: none;
 }
 
 .nav-links > *:hover {
     text-decoration: underline;
+    color: #ffee19;
 }
 
 .navigation-social-media {
@@ -36,7 +37,8 @@
     height: 35px;
     width: 35px;
     margin-right: 10px;
-    color: #eee;
+    color: #bf6e67;
+    transition: color 300ms ease-in-out;
 }
 
 .navigation-social-media-icon:hover {
