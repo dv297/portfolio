@@ -42,6 +42,7 @@ const Resume = () => {
           <li>MongoDB</li>
           <li>GraphQL</li>
           <li>Socket.IO</li>
+          <li>Ruby on Rails</li>
           <li>WebRTC</li>
           <li>Android Development</li>
           <li>HTML</li>
@@ -70,6 +71,47 @@ const Resume = () => {
         <hr />
         <h2>Professional Experiences</h2>
         <ExperienceCard
+          company="Cerner Corporation"
+          jobTitle="Senior Software Engineer"
+          timeWorked="January 2016 – Present"
+        >
+          <ul>
+            <li>Developed React single page applications for scheduling patients in ambulatory and acute scenarios</li>
+            <li>
+              Educated the team and organization about uplifting the web code base to use modern tooling and trends,
+              such as Webpack, Babel, and ES2015 by blogging, giving talks, and providing training
+            </li>
+            <li>
+              Contributed to Cerner’s open-source reusable component library
+              “Terra”
+            </li>
+            <li>
+              Worked on improving Cerner Scheduling's CI/CD workflow through the
+              use of Jenkins
+            </li>
+            <li>
+              Delivered high-level, long running estimates of future projects through collaboration with solution
+              designers, UX designers, and other engineering teams to ensure appropriate scoping of tasks and timelines
+            </li>
+          </ul>
+          <small>Technologies Worked With:</small>
+          <br />
+          {getPillList([
+            'ES2015',
+            'React',
+            'Jest',
+            'Redux',
+            'Webpack',
+            'Babel',
+            'Jenkins',
+            'Docker',
+            'SASS',
+            'Java',
+            'Ruby on Rails',
+            'jQuery',
+          ])}
+        </ExperienceCard>
+        <ExperienceCard
           company="The University of Kansas"
           jobTitle="Full-stack Web Development Bootcamp Instructor"
           timeWorked="November 2018 – Present"
@@ -95,42 +137,6 @@ const Resume = () => {
             'MySQL',
             'MongoDB',
             'React',
-          ])}
-        </ExperienceCard>
-        <ExperienceCard
-          company="Cerner Corporation"
-          jobTitle="Associate Senior Software Engineer"
-          timeWorked="January 2016 – Present"
-        >
-          <ul>
-            <li>Developed React and Redux web applications</li>
-            <li>
-              Educated the team about web development through talks and
-              knowledge transfers
-            </li>
-            <li>
-              Contributed to Cerner’s open-source reusable component library
-              “Terra”
-            </li>
-            <li>
-              Worked on improving Cerner Scheduling's CI/CD workflow through the
-              use of Jenkins
-            </li>
-          </ul>
-          <small>Technologies Worked With:</small>
-          <br />
-          {getPillList([
-            'ES2015',
-            'React',
-            'Jest',
-            'Redux',
-            'Webpack',
-            'Babel',
-            'Jenkins',
-            'Docker',
-            'SASS',
-            'Java',
-            'jQuery',
           ])}
         </ExperienceCard>
         <ExperienceCard
