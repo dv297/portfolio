@@ -6,6 +6,8 @@ import BlogPostListing from '../components/BlogPostListing/BlogPostListing'
 import DefaultPageContainer from '../components/DefaultPageContainer/DefaultPageContainer'
 import Layout from '../components/Layout'
 
+import './Blog.css'
+
 const IndexPage = ({
   data: {
     allMarkdownRemark: { edges },

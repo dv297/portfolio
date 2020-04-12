@@ -1,8 +1,8 @@
 ---
-path: "/designing-shared-npm-scripts"
-date: "2018-06-19"
-title: "Designing Shared NPM Scripts"
-tags: ["Development", "NPM", "JavaScript", "Web"]
+path: '/designing-shared-npm-scripts'
+date: '2018-06-19'
+title: 'Designing Shared NPM Scripts'
+tags: ['Development', 'NPM', 'JavaScript', 'Web']
 ---
 
 NPM scripts have long taken over the build process of Web projects. While Grunt and Gulp commands are still used by
