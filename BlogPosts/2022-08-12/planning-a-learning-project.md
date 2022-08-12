@@ -83,7 +83,7 @@ with this kind of project.
   - Automation Pipelines: Running the linting and testing
 
 **_The important thing here is to pick one or two skills and focus on those._** Don't overload yourself. By limiting the
-skill you want to practice, you can plan on how you spend your time for acheiving your learning goals.
+skill you want to practice, you can plan on how you spend your time for achieving your learning goals.
 
 ## Tip #2: Pick your project, pick your tools, and stick with them
 
