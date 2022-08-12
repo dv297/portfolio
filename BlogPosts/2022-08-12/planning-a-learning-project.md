@@ -2,7 +2,7 @@
 path: '/planning-a-learning-project'
 date: '2022-08-12'
 title: 'Planning a Learning Project'
-tags: ['Development', 'Software Engineering', JavaScript']
+tags: ['Development', 'Software Engineering']
 ---
 
 **tl;dr:** The benefits of building a project soley for learning and steps to help make sure you learn.
