@@ -158,7 +158,7 @@ I opened the React Dev Tools, and enabled the "Highlight updates when component 
 
 From there, I played with the application.
 
-![A video recording demonstrating the behavior of the game before performance changes](./before-perf-changes.gif 'Before the performance changes')
+<img alt="A video recording demonstrating the behavior of the game before performance changes" height="400" src="./before-perf-changes.gif" title="&#39;Before the performance changes&#39;" width="399"/>
 
 As I clicked on a tile on the board, I noticed the entire board was outlined in green, which meant the React Dev Tool
 was telling me that every single component on the board was re-rendering. This seemed excessive; if I'm clicking on one
@@ -167,7 +167,7 @@ two tiles should have to re-render.
 
 After some minor tweaks, I finally got the behavior that I wanted. Only the cells that were actually interacted with
 were re-rendering.
-![A video recording demonstrating the behavior of the game after performance changes](./after-perf-changes.gif 'After the performance changes')
+<img alt="A video recording demonstrating the behavior of the game after performance changes" height="400" src="./after-perf-changes.gif" title="&#39;After the performance changes&#39;" width="399"/>
 
 And to me, that's one of the beauty of learning projects. You're able to able to continue learning the material at
 deeper and deeper levels through a codebase you're already familiar with.
